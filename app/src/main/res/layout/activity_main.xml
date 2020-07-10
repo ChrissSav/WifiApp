@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="00:00"
+        android:textColor="@android:color/black"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32" />
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="@dimen/buttons_dimen"
+        android:layout_height="@dimen/buttons_dimen"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/ic_start"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="@+id/text_view_countdown"
+        app:layout_constraintStart_toStartOf="@+id/text_view_countdown"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_countdown" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="@dimen/buttons_dimen"
+        android:layout_height="@dimen/buttons_dimen"
+        android:layout_below="@+id/text_view_countdown"
+        android:layout_marginTop="32dp"
+        android:layout_toEndOf="@+id/button_start_pause"
+        android:background="@drawable/restart"
+        android:scaleType="fitXY"
+        android:backgroundTint="@color/colorPrimary"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/button_start_pause"
+        app:layout_constraintStart_toStartOf="@+id/button_start_pause"
+        app:layout_constraintTop_toBottomOf="@+id/button_start_pause"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
